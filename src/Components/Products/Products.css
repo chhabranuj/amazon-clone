@@ -1,0 +1,40 @@
+.productsCountAndParent {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.productsCount {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.noOfProducts {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #17353D;
+}
+
+.productsTitle {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #17353D;
+}
+
+.productsParent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 641px) {
+    .productsParent {
+        flex-direction: column;
+    }
+}

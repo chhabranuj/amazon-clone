@@ -1,0 +1,137 @@
+.shoeDetailsParent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.shoeImgParent {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px 0;
+    border-radius: 4px;
+}
+
+.shoeImg {
+    width: 300px;
+    height: 250px;
+}
+
+.shoeData {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 5%;
+}
+
+.shoeNameRaingParent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.shoeName {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #17353D;
+    margin: 0 20px 0 0;
+}
+
+.shoeRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.starRating {
+    width: 20px;
+    height: 20px;
+}
+
+.rating {
+    font-size: 18px;
+}
+
+.shoeDetails {
+    margin: 20px 0;
+    color: #17353D;
+    font-size: large;
+}
+
+.shoePrice {
+    color: #D01E1E;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 0;
+}
+
+.shoeDelivery {
+    color: #17353D;
+}
+
+.shoeQuantity {
+    color: #17353D;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+}
+
+.noOfquantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.quantity {
+    padding: 5px 10px;
+    color: #393939;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.countQuantity {
+    font-size: larger;
+    padding: 6.3px 10px;
+    background-color: #e5e5e5;
+    color: black;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.addBtn {
+    background-color: #F79B34 !important;
+    border-radius: 4px !important;
+    font-weight: bold !important;
+}
+
+@media screen and (max-width: 641px) {
+    .shoeDetailsParent {
+        flex-direction: column;
+        padding: 20% 0 15% 0;
+    }
+
+    .shoeImgParent {
+        width: 100%;
+    }
+
+    .shoeNameRaingParent {
+        justify-content: space-between;
+    }
+
+    .shoeData {
+        width: 100%;
+        align-items: center;
+    }
+}
