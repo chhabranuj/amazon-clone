@@ -20,27 +20,34 @@ const ProductsDetails = (props) => {
     }
 
     const handleAddQuantity = () => {
-        count++;
-        setCount(count)
+        if(count != details.totalStocks) {
+            count++;
+            setCount(count)
+        }
     }
 
     return (
         <div className='shoeDetailsParent'>
             <div className='shoeImgParent'>
-                <img className='shoeImg' src={details.url} />
+                <img className='shoeImg' src={details.image} />
             </div>
             <div className='shoeData'>
                 <div className='shoeNameRaingParent'>
-                    <p className='shoeName'>{details.name}</p>
+                    <div className='nameAndBrand'>
+                        <p className='shoeName'>{details.productName}</p>
+                        <p className='shoeBrandName'>Brand Name: {details.brandName}</p>
+                    </div>
                     <div className='shoeRating'>
                         <img className='starRating' src={star} />
-                        <p className='rating'>&nbsp;&nbsp;{details.rating}</p>
+                        <p className='rating'>&nbsp;&nbsp;4.0</p>
                     </div>
                 </div>
-                <p className='shoeDetails'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus corporis quaerat, maiores reprehenderit aut ut fuga ipsum earum exercitationem dolorem nobis ullam nemo, porro tempore, vero deleniti? Praesentium id ut repellendus quam sunt quis atque expedita quo sed eaque eum, autem laboriosam soluta at deserunt incidunt nobis. Possimus, commodi velit!</p>
-                <p className='shoePrice'>{details.price}</p>
-                <p className='shoeDelivery'>Delivery By:- {details.deliveryBy}</p>
-                <p className='shoeQuantity'>Qty</p>
+                <p className='shoeDetails'>{details.productDescription}</p>
+                <p className='shoePrice'>Original Price: <span style={{textDecoration: 'line-through', fontSize: 'large', color: '#17353D'}}>₹{details.productPrice}</span>&nbsp;&nbsp;<span>₹{details.productPrice * (100 - details.productDiscount)/100}</span></p>
+                <p className='discount'>Discount: {details.productDiscount}%</p>
+                <p className='variation'>{details.variationTypeOne}: {details.typeOneDetail.join(', ')}</p>
+                {details.typeTwoDetail.join(',') && <p className='variation'>{details.variationTypeTwo}: {details.typeTwoDetail.join(', ')}</p>}
+                <p className='shoeQuantity'>Qty &nbsp;&nbsp;<span style={{color: 'red', fontSize: 'medium'}}>[{details.totalStocks} Left in Stock]</span></p>
                 <div className='noOfquantity'>
                     <RemoveIcon className='quantity'  onClick={handleSubQuantity}/>
                     <p className='countQuantity'>{count}</p>

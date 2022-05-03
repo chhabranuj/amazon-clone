@@ -1,11 +1,9 @@
 import './TitleBar.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logo from '../../assets/images/logo.png'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const TitleBar = () => {
-
-
     const [menu, setMenu] = useState('quickLinksParent');
 
     const handleShowMenuMobile = () => {
